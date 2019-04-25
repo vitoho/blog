@@ -8,6 +8,7 @@ weight: 50
 
 Hugo is a static site engine written in Go.
 
+about
 
 It makes use of a variety of open source projects including:
 
