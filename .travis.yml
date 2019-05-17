@@ -9,8 +9,8 @@ script:
   - hugo
 
 before_deploy:
-  - cd ./public
-  
+  #- cd ./public
+
 deploy:
   provider: firebase
   token:
