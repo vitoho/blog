@@ -7,7 +7,7 @@ install:
 - cd ./public
 
 script:
-  - hugo --cleanDestinationDir
+  - hugo
 
 deploy:
   provider: firebase
