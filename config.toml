@@ -1,7 +1,7 @@
 baseURL = ""
 languageCode = "en"
 title = "Hugo Blog"
-theme = "hugo-nuo"
+theme = "hugo-theme-minos"
 enableRobotsTXT = true
 PygmentsCodeFences = true
 canonifyurls = true
