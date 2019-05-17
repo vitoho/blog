@@ -1,22 +1,12 @@
-language: go
-
-go:
-  - master # This uses automatically the latest version of go
-
-install:
-  - go get github.com/gohugoio/hugo # This provides the latest version of Hugo to Travis CI
-
+language: node_js
+sudo: required
+before_script:
+  # download latest version of hugo
+  - wget https://github.com/spf13/hugo/releases/download/v0.19/hugo_0.19-64bit.deb
+  # install it
+  - sudo dpkg -i hugo*.deb
 script:
-  - hugo # This commands builds your website on travis
-
-deploy:
-  #local_dir: public # Default static site output dir for Hugo
-  #repo: <yourusername>/<yourusername>.github.io # This is the slug of the repo you want to deploy your site to
-  #target_branch: master # GitHub pages branch to deploy to (in other cases it can be gh-pages)
-  #provider: pages
-  #skip_cleanup: true
-  #github_token: $GITHUB_TOKEN # This is the authentication which you will setup in the next step in travis-ci dashboard
-  #email: yourmail@mail.com
-  #name: "Your username"
-  #on:
-   # branch: master
+  # first dump all the remote content as local files
+  - ./node_modules/.bin/dato dump
+  # then generate the website
+  - hugo
