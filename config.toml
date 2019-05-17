@@ -2,3 +2,14 @@ baseURL = "http://example.org/"
 languageCode = "en-us"
 title = "My New Hugo Site"
 theme = "hugo-theme-minos"
+copyright = "© 2016 Copyright Reini Urban"
+uglyURLs = true
+categories = [ "cperl", "rperl" ]
+
+[params]
+    author = "perl11"
+    photo = "images/reini.jpg"
+    #github = "perl11/cperl"
+    #googleAnalytics = ""
+    #smartToc = true
+
