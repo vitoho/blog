@@ -1,12 +1,11 @@
-language: node_js
+language: go
 sudo: required
-before_script:
-  # download latest version of hugo
-  - wget https://github.com/spf13/hugo/releases/download/v0.19/hugo_0.19-64bit.deb
-  # install it
-  - sudo dpkg -i hugo*.deb
+
+install:
+- wget https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.deb
+- sudo dpkg -i hugo*.deb
+
 script:
-  # first dump all the remote content as local files
-  - ./node_modules/.bin/dato dump
-  # then generate the website
   - hugo
+
+  
