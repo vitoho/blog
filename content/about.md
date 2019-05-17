@@ -17,6 +17,7 @@ It makes use of a variety of open source projects including:
 * [J Walter Weatherman](https://github.com/spf13/jWalterWeatherman)
 * [Cast](https://github.com/spf13/cast)
 * Modify testing
+* second time testing
 
 Learn more and contribute on [GitHub](https://github.com/gohugoio).
 
