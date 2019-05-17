@@ -6,7 +6,7 @@ install:
 - sudo dpkg -i hugo*.deb
 
 script:
-  - hugo
+  - hugo new site
 
 before_deploy:
   #- cd ./public
