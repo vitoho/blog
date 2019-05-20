@@ -7,8 +7,8 @@ uglyURLs = true
 categories = [ "cperl", "rperl" ]
 
 [params]
-    author = "perl11"
-    photo = "images/reini.jpg"
+    author = "Vito"
+    #photo = "images/reini.jpg"
     #github = "perl11/cperl"
     #googleAnalytics = ""
     #smartToc = true
