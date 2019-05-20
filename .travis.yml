@@ -12,7 +12,7 @@ before_deploy:
   #- cd ./public
 
 deploy:
-  skip_cleanup: true
+  #skip_cleanup: true
   provider: firebase
   token:
     secure: "${Firebase_token}"
