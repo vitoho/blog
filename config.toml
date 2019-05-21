@@ -1,5 +1,5 @@
-baseurl = "https://example.com/"
-title = "Bootstrap demo"
+baseurl = "https://vitoho.ml"
+title = "Vito's Site"
 languageCode = "en-us"
 defaultContentLanguage = "en"
 
@@ -36,36 +36,20 @@ theme = "hugo-bootstrap"
     name = "Contact"
     weight = 3
 
-[languages.es]
-  languageName = "Español"
+[languages.zh]
+  languageName = "Chinese Simplified"
 
-  [[languages.es.menu.main]]
-    url = "/es/"
-    name = "Casa"
+  [[languages.zh.menu.main]]
+    url = "/zh/"
+    name = "主页"
     weight = 1
-  [[languages.es.menu.main]]
+  [[languages.zh.menu.main]]
     url = "/about/"
-    name = "Acerca de"
+    name = "关于"
     weight = 2
-  [[languages.es.menu.main]]
+  [[languages.zh.menu.main]]
     url = "/contact/"
-    name = "Contacto"
-    weight = 3
-
-[languages.de]
-  languageName = "Deutsch"
-
-  [[languages.de.menu.main]]
-    url = "/de/"
-    name = "Start"
-    weight = 1
-  [[languages.de.menu.main]]
-    url = "/about/"
-    name = "Über uns"
-    weight = 2
-  [[languages.de.menu.main]]
-    url = "/contact/"
-    name = "Kontakt"
+    name = "联系"
     weight = 3
 
 # Links format
