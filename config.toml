@@ -1,5 +1,5 @@
 baseurl = "https://vitoho.ml"
-title = "Vito's Site"
+title = "Vito's Collection"
 languageCode = "en-us"
 defaultContentLanguage = "en"
 
@@ -62,7 +62,7 @@ theme = "hugo-bootstrap"
   mainSections = ["post"]
 
   # Default author
-  author = "John Doe"
+  author = "Vito Ho"
 
   # Date format (default: Jan 2, 2006)
   # date_format = "Jan 2, 2006"
@@ -82,8 +82,8 @@ theme = "hugo-bootstrap"
 
   [params.header]
     # Color scheme for the header (default: "light")
-    # colorScheme = "dark"
+     colorScheme = "dark"
 
   [params.footer]
     # Color scheme for the footer (default: "light")
-    # colorScheme = "dark"
+     colorScheme = "dark"
