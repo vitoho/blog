@@ -2,22 +2,22 @@
   translation: "by"
 
 - id: tags
-  translation: "Tags"
+  translation: "标签"
 
 - id: categories
-  translation: "Categories"
+  translation: "类别"
 
 - id: readMore
-  translation: "Read More →"
+  translation: "了解更多 →"
 
 - id: translations
   translation: "Translations"
 
 - id: related
-  translation: "See also"
+  translation: "相关连接"
 
 - id: recentPosts
-  translation: "Recent Posts"
+  translation: "最近更新"
 
 - id: backToTop
   translation: "回到顶部"
