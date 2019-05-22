@@ -23,7 +23,7 @@
   translation: "回到顶部"
 
 - id: language
-  translation: "En/中"
+  translation: "EN/中"
 
 - id: thanks
   translation: "Hugo template made with ❤ by {{.Xzya}}, inspired by {{.HugoThemeBootstrap4Blog}}"
