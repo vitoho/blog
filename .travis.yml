@@ -16,3 +16,7 @@ deploy:
   provider: firebase
   token:
     secure: "${Firebase_token}"
+
+notifications:
+  slack:
+    on_success: always
