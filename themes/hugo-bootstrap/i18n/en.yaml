@@ -23,7 +23,7 @@
   translation: "Back to top"
 
 - id: language
-  translation: "Language"
+  translation: "EN/中"
 
 - id: thanks
   translation: "Hugo template made with ❤ by {{.Xzya}}, inspired by {{.HugoThemeBootstrap4Blog}}"
