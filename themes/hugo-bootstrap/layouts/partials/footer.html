@@ -1,7 +1,7 @@
 {{ $Hugo := "<a href=\"https://github.com/Xzya\">Xzya</a>" }}
 {{ $Xzya := "<a href=\"https://github.com/Xzya\">Xzya</a>" }}
 {{ $HugoThemeBootstrap4Blog := "<a href=\"https://github.com/alanorth/hugo-theme-bootstrap4-blog\">hugo-theme-bootstrap4-blog</a>" }}
-{{ $links := (dict "Xzya" $Xzya "HugoThemeBootstrap4Blog" $HugoThemeBootstrap4Blog ) }}
+{{ $links := (dict "Hugo" $Hugo "Xzya" $Xzya "HugoThemeBootstrap4Blog" $HugoThemeBootstrap4Blog ) }}
 {{ $thanks := i18n "thanks" $links | safeHTML }}
 
 {{ $copyright := default $thanks .Site.Copyright }}
