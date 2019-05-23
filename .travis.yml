@@ -18,5 +18,5 @@ deploy:
     secure: "${Firebase_token}"
 
 notifications:
-  slack:
+  email:
     on_success: always
