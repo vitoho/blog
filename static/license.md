@@ -1,7 +1,7 @@
             DO WHAT THE FUCK YOU WANT TO PUBLIC LICENSE
-                    Version 1, MARCH 2018
+                    Version 1, May 2019
 
- Copyright (C) 2018 Showfom <sb@sb.sb>
+ Copyright (C) 2019 Vito Ho <hey#vitoho.ml>
 
  Everyone is permitted to copy and distribute verbatim or modified
  copies of this license document, and changing it is allowed as long
