@@ -26,4 +26,4 @@
   translation: "EN/中"
 
 - id: thanks
-  translation: "Powered by Hugo, Theme by {{.Xzya}}. Hosted on Google Firebase."
+  translation: "Powered by {{.Hugo}}, Theme by {{.Xzya}}. Hosted on Google Firebase."
