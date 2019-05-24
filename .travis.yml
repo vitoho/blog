@@ -1,4 +1,4 @@
-language: go, node_js
+language: go node_js
 sudo: enable
 
 install:
