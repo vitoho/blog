@@ -11,7 +11,7 @@ install:
 script:
   - sudo hugo
   - npm install hugo-algolia
-  - hugo-algolia -s
+  #- hugo-algolia -s
 
 before_deploy:
   #- cd ./public
