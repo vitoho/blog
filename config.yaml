@@ -1,0 +1,12 @@
+---
+baseURL: "/"
+languageCode: "en-us"
+title: "Vito's Collection"
+theme: "your-theme"
+description: "A knowledge Collection Site"
+
+algolia:
+  index: "default"
+  key: "${ALGOLIA_API_KEY}"
+  appID: "${ALGOLIA_APP_KEY}"
+---
