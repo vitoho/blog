@@ -9,4 +9,5 @@ algolia:
   index: "default"
   key: "${ALGOLIA_API_KEY}"
   appID: "${ALGOLIA_APP_KEY}"
+  
 ---
