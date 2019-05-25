@@ -87,3 +87,13 @@ theme = "hugo-bootstrap"
   [params.footer]
     # Color scheme for the footer (default: "light")
     # colorScheme = "dark"
+
+
+  [outputFormats.Algolia]
+    baseName = "algolia"
+    isPlainText = true
+    mediaType = "application/json"
+    notAlternative = true
+
+  [outputs]
+    home = ["HTML", "RSS", "Algolia"]
