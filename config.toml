@@ -15,7 +15,7 @@ DefaultContentLanguage = "en"
 googleAnalytics = ""
 
 # Enable / Disable comments on the articles via Disqus.
-disqusShortname = "bilberry-hugo-theme"
+disqusShortname = ""
 
 # Enable / Disable open link with a new tab.
 [blackfriday]
