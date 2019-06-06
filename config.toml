@@ -23,7 +23,7 @@ disqusShortname = ""
 
 [params]
   # Favicon for the browser's favorites and tabs
-  favicon = "favicon.ico" # set a favicon icon
+  #favicon = "favicon.ico" # set a favicon icon
 
   # Custom CSS / JS modules that will be imported by the template.
   # Files are relative to the static/ directory or a URL.
