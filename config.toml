@@ -137,10 +137,10 @@ disqusShortname = ""
 [Languages]
   [Languages.en]
     weight = 1
-  [Languages.de]
+  [Languages.zh]
     weight = 2
-    title = "Mein cooler neuer Blog"
-    subtitle = "Hallo Welt! Dies ist der epischste Untertitel aller Zeiten."
+    title = "Vito的收藏集"
+    subtitle = ""
 
 # don't change anything below
 [taxonomies]
