@@ -3,7 +3,7 @@ title = "Vito's Collection"
 #languageCode = "en-us"
 
 # Theme to use
-theme = "bilberry-hugo"
+theme = "bilberry-hugo-theme"
 
 
 enableRobotsTXT = true
