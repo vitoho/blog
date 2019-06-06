@@ -47,7 +47,7 @@ disqusShortname = ""
   algolia_search    = true
   algolia_appId     = "3O4AZ7YKWQ"
   algolia_apiKey    = "11af88491bfd14fff5a56f283d65a9cc"
-  algolia_indexName = "default-content"
+  algolia_indexName = "default"
     # Set this option to false if you want to search within all articles in all languages at once
     algolia_currentLanguageOnly = true
 
