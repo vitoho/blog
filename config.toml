@@ -1,10 +1,7 @@
-baseurl = "https://vitoho.ml/"
 title = "Vito's Collection"
-#languageCode = "en-us"
-
-# Theme to use
+# Add an trailing slash to ensure that all fonts render correctly.
+baseURL = "https://vitoho.ml"
 theme = "bilberry-hugo-theme"
-
 
 enableRobotsTXT = true
 
@@ -23,17 +20,17 @@ disqusShortname = ""
 
 [params]
   # Favicon for the browser's favorites and tabs
-  #favicon = "favicon.ico" # set a favicon icon
+  favicon = "" # set a favicon icon
 
   # Custom CSS / JS modules that will be imported by the template.
   # Files are relative to the static/ directory or a URL.
   # Files are imported in the order they appear here, after
   # theme.css and theme.js, respectively.
-  css_modules = "dist/theme.css"
+  css_modules = []
   js_modules = []
 
   # Description and meta data for the search engines
-  author = "Lednerb"
+  author = "Vito"
   description = "Bilberry Premium Theme for Hugo."
   keywords = "blog,personal,responsive,search,font awesome,pages,posts,multilingual,highlight.js,syntax highlighting,premium,shortcuts"
 
@@ -49,7 +46,7 @@ disqusShortname = ""
   algolia_apiKey    = "11af88491bfd14fff5a56f283d65a9cc"
   algolia_indexName = "default"
     # Set this option to false if you want to search within all articles in all languages at once
-    algolia_currentLanguageOnly = false
+    algolia_currentLanguageOnly = true
 
   # Style configuration
     # set the width of your site's content
@@ -139,8 +136,8 @@ disqusShortname = ""
     weight = 1
   [Languages.zh]
     weight = 2
-    title = "Vito的收藏集"
-    subtitle = ""
+    title = "Mein cooler neuer Blog"
+    subtitle = "Hallo Welt! Dies ist der epischste Untertitel aller Zeiten."
 
 # don't change anything below
 [taxonomies]
@@ -151,3 +148,4 @@ disqusShortname = ""
 [outputs]
   home = [ "HTML", "JSON", "RSS" ]
   page = [ "HTML" ]
+
