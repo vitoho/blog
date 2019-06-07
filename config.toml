@@ -26,7 +26,7 @@ disqusShortname = ""
   # Files are relative to the static/ directory or a URL.
   # Files are imported in the order they appear here, after
   # theme.css and theme.js, respectively.
-  css_modules = [ednerb.github.io/bilberry-hugo-theme/dist/theme.css]
+  css_modules = "ednerb.github.io/bilberry-hugo-theme/dist/theme.css"
   js_modules = []
 
   # Description and meta data for the search engines
