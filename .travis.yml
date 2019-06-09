@@ -14,7 +14,7 @@ install:
 - sudo dpkg -i hugo*.deb
 
 script:
-  - sudo hugo
+  - sudo hugo -d
   - npm install hugo-algolia
   #- hugo-algolia -s
 
