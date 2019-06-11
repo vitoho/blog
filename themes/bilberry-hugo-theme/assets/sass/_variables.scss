@@ -1,4 +1,4 @@
-{{ $fonts := "static/dist/fonts/" | absURL }};
+{{ $fonts := "dist/fonts/" | absURL }};
 $fonts-folder: '{{ .Site.Params.CustomFontsURL | default $fonts }}';
 
 // Set the with of the main content area
