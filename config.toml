@@ -1,6 +1,6 @@
 title = "Vito's Collection"
 # Add an trailing slash to ensure that all fonts render correctly.
-baseURL = "https://vitoho.ml"
+baseURL = "https://vitoho.ml/"
 theme = "bilberry-hugo-theme"
 
 enableRobotsTXT = true
