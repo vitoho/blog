@@ -57,7 +57,7 @@
         {{ $theme := resources.Get "sass/theme.scss" }}
         {{ $combined := slice $variables $theme | resources.Concat "sass/combined.scss" | resources.ExecuteAsTemplate "sass/combined.scss" .  }}
         {{ $style := $combined | toCSS | minify | fingerprint }}
-        <link rel="stylesheet" href="{{ $style.RelPermalink }}">
+        <!--<link rel="stylesheet" href="{{ $style.RelPermalink }}">-->
 
         {{ partial "twitter-card" . }}
 
