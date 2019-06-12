@@ -10,12 +10,12 @@ branches:
   - stable
 
 install:
-- wget https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_${HUGO_VERSION}_Linux-64bit.deb
+- wget https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.deb
 - sudo dpkg -i hugo*.deb
 
 script:
-  - sudo hugo -D
-  - npm install hugo-algolia
+  - sudo hugo --minify
+  #- npm install hugo-algolia
   #- hugo-algolia -s
 
 before_deploy:
