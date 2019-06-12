@@ -1,4 +1,3 @@
-dist: xenial
 language: go node_js
 sudo: enable
 
@@ -10,9 +9,13 @@ branches:
   - master
   - stable
 
+before_install:
+  - npm install -g n
+  - sudo pip install urllib3[secure] awscli --upgrade --user
+
 install:
-- wget https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.deb
-- sudo dpkg -i hugo*.deb
+  - wget https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.deb
+  - sudo dpkg -i hugo*.deb
 
 script:
   - sudo hugo --minify
