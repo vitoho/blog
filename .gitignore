@@ -67,3 +67,7 @@ node_modules/
 #Publish
 public/
 
+#gen
+resources/_gen/
+
+
