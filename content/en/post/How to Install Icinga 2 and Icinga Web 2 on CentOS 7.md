@@ -8,7 +8,7 @@ header:
   caption: "test"
   image: ""
 
-#draft: true
+draft: true
 ---
 Original Article: https://www.vultr.com/docs/how-to-install-icinga-2-and-icinga-web-2-on-centos-7
 
