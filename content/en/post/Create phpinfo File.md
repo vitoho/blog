@@ -1,7 +1,7 @@
 ---
 #date: 2019-06-18
 title: Create a phpinfo File
-#tag:["Icinga"]
+tags:["Icinga"]
 view: 2
 #draft: true
 ---
