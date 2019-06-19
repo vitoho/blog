@@ -83,7 +83,7 @@ Save and quit:
 Restart the Apache service in order to put new configurations into effect:
 
 sudo systemctl restart httpd.service
-***Step 5: Install Icinga 2 and its plugins
+***Step 5: Install Icinga 2 and its plugins(SELinux)
 On CentOS 7, you can install Icinga 2 and its plugins using the icinga YUM repo:
 
 sudo rpm --import http://packages.icinga.org/icinga.key 
