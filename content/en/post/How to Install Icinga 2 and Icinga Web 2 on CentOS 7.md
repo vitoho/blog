@@ -13,18 +13,24 @@ Prerequisites
 A fresh Vultr CentOS 7 server instance.
 A sudo user.
 Step 1: Update the system
+
+```shell
 sudo yum install epel-release -y
 sudo yum update -y
 sudo shutdown -r now
+```
+
 After the reboot, use the same sudo user to log in.
 
 Step 2: Install Apache
 Install Apache using YUM:
-
+```shell
 sudo yum install httpd -y
+```
 Disable the pre-set Apache welcome page:
-
+```shell
 sudo sed -i 's/^/#&/g' /etc/httpd/conf.d/welcome.conf
+```
 Forbid Apache from exposing files and directories within the web root directory /var/www/html to visitors:
 
 sudo sed -i "s/Options Indexes FollowSymLinks/Options FollowSymLinks/" /etc/httpd/conf/httpd.conf
@@ -61,7 +67,10 @@ Then you need to setup the proper timezone for your machine, which can be determ
 
 Open the PHP configuration file with the vi editor:
 
-sudo vi /etc/php.ini
+~~sudo vi /etc/php.ini~~
+
+sudo vi /etc/opt/rh/rh-php71/php.ini
+
 Find the line:
 
 ;date.timezone =
@@ -74,7 +83,7 @@ Save and quit:
 Restart the Apache service in order to put new configurations into effect:
 
 sudo systemctl restart httpd.service
-Step 5: Install Icinga 2 and its plugins
+***Step 5: Install Icinga 2 and its plugins
 On CentOS 7, you can install Icinga 2 and its plugins using the icinga YUM repo:
 
 sudo rpm --import http://packages.icinga.org/icinga.key 
@@ -146,7 +155,10 @@ You can verify your modification using the following command:
 id apache
 7.2) Install the icingaweb2 and icingacli RPM packages
 
-sudo yum install icingaweb2 icingacli -y
+sudo yum install icingaweb2 icingacli icingaweb2-selinux -y
+
+If you have [SELinux](https://icinga.com/docs/icingaweb2/latest/doc/90-SELinux/) enabled, the package `icingaweb2-selinux` is also required. For RHEL/CentOS please read the [package repositories notes](https://icinga.com/docs/icingaweb2/latest/doc/02-Installation/#package-repositories-rhel-notes).
+
 Point the Apache web root directory to the location of Icinga Web 2:
 
 sudo icingacli setup config webserver apache --document-root /usr/share/icingaweb2/public
