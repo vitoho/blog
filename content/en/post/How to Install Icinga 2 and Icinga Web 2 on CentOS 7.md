@@ -2,7 +2,6 @@
 #date: 2019-06-18
 title: How to Install Icinga 2 and Icinga Web 2 on CentOS 7
 tags: ["icinga2","CentOS"]
-view: 2
 #draft: true
 links:
   - icon_pack: fas
@@ -181,6 +180,7 @@ sudo systemctl restart icinga2.service
 ```
 ### Step 7: Install Icinga Web 2
 7.1) Setup external command pipe
+
 ```bash
 sudo icinga2 feature enable command
 sudo systemctl restart icinga2.service
@@ -225,6 +225,7 @@ sudo firewall-cmd --reload
 Point your web browser to the following URL:
 
 http://`<your-server-ip>`/icingaweb2/setup
+
 7.6) On the Welcome page, input the setup token you generated earlier, and then click the "Next" button.
 
 7.7) On the Modules page, select modules you want to enable (at least, the Monitoring module is required), and then click the "Next" button.
@@ -235,23 +236,26 @@ http://`<your-server-ip>`/icingaweb2/setup
 
 7.10) On the Database Resource page, fill out all required fields as below, and then click the "Next" button.
 
->Resource Name*: icingaweb_db
+```
+Resource Name*: icingaweb_db
 Database Type*: MySQL
 Host*: localhost
 Database Name*: icingaweb2
 Username*: root
 Password*: <MariaDB-root-password>
+```
 7.11) On the Authentication Backend page, using the default backend name icingaweb2, click the Next button to move on.
 
 7.12) On the Administration page, setup the first Icinga Web 2 administrative account (say it is icingaweb2admin) and password (icingaweb2pass), and then click the "Next" button.
 
 7.13) On the Application Configuration page, you can adjust application- and logging-related configuration options to fit your needs. For now, you can use the default values listed below and click the "Next" button to proceed.
-
->Show Stacktraces: Checked
->User Preference Storage Type*: Database
->Logging Type*: Syslog
->Logging Level*: Error
->Application Prefix*: icingaweb2
+```
+Show Stacktraces: Checked
+User Preference Storage Type*: Database
+Logging Type*: Syslog
+Logging Level*: Error
+Application Prefix*: icingaweb2
+```
 7.14) On the Review page, double check your configuration, and then click the Next button.
 
 7.15) On the Monitoring Module Configuration Welcome page, click the Next button.
@@ -259,27 +263,26 @@ Password*: <MariaDB-root-password>
 7.16) On the Monitoring Backend page, use the default backend name icinga and backend type IDO, and then click the "Next" button.
 
 7.17) On the Monitoring IDO Resource page, input IDO database details you setup earlier, and then click the "Next" button.
-
->Resource Name*: icinga_ido
->Database Type*: MySQL
->Host*: localhost
->Database Name*: icinga
->Username*: icinga
->Password*: icinga
-
+```
+Resource Name*: icinga_ido
+Database Type*: MySQL
+Host*: localhost
+Database Name*: icinga
+Username*: icinga
+Password*: icinga
+```
 7.18) On the Command Transport page, still use these default values listed below. Click the Next button to move on.
-
->Transport Name*: icinga2
->Transport Type*: Local Command File
->Command File*: /var/run/icinga2/cmd/icinga2.cmd
-
+```
+Transport Name*: icinga2
+Transport Type*: Local Command File
+Command File*: /var/run/icinga2/cmd/icinga2.cmd
+```
 7.19) On the Monitoring Security page, still use the default value:
-
->Protected Custom Variables: *pw*,*pass*,community
+```
+Protected Custom Variables: *pw*,*pass*,community
+```
 Click the "Next" button to go to next page.
 
 7.20) On the review page, double check your configuration, and then click the Finish button.
 
 7.21) On the Congratulations! page, click the Login to Icinga Web 2 button to jump to the Icinga Web 2 login page. Use the Icinga Web 2 administrative account and password you setup earlier to log in. Feel free to explore the Icinga Web 2 dashboard.
-
-That concludes our tutorial. Thank you for reading.
