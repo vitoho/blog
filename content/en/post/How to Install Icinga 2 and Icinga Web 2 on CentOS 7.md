@@ -53,7 +53,7 @@ sudo systemctl start httpd.service
 sudo systemctl enable httpd.service
 ```
 
-### Step 3: Install MariaDB
+## Step 3: Install MariaDB
 
 Install MariaDB using YUM:
 ```bash
@@ -79,7 +79,7 @@ Disallow root login remotely? [Y/n]: Y
 Remove test database and access to it? [Y/n]: Y
 Reload privilege tables now? [Y/n]: Y
 ```
-### Step 4: Install PHP
+## Step 4: Install PHP
 Install PHP and necessary PHP extensions as required by Icinga 2 and Icinga Web 2:
 ```bash
 sudo yum install php php-gd php-intl php-ldap php-ZendFramework php-ZendFramework-Db-Adapter-Pdo-Mysql -y
@@ -110,7 +110,7 @@ Restart the Apache service in order to put new configurations into effect:
 ```bash
 sudo systemctl restart httpd.service
 ```
-### ***Step 5: Install Icinga 2 and its plugins(SELinux)
+## ***Step 5: Install Icinga 2 and its plugins(SELinux)
 On CentOS 7, you can install Icinga 2 and its plugins using the icinga YUM repo:
 ```bash
 sudo rpm --import http://packages.icinga.org/icinga.key 
@@ -128,12 +128,12 @@ By default, the Icinga 2 program will enable three features: checker, mainlog, a
 ```bash
 sudo icinga2 feature list
 ```
-### Step 6: Setup the Icinga 2 IDO modules
-6.1) Install the IDO (Icinga Data Output) modules for MySQL**
+## Step 6: Setup the Icinga 2 IDO modules
+### 6.1) Install the IDO (Icinga Data Output) modules for MySQL
 ```bash
 sudo yum install icinga2-ido-mysql -y
 ```
-6.2) Create a database for Icinga 2**
+### 6.2) Create a database for Icinga 2**
 
 Log into the MySQL shell as root:
 ```bash
@@ -148,13 +148,13 @@ GRANT SELECT, INSERT, UPDATE, DELETE, DROP, CREATE VIEW, INDEX, EXECUTE ON icing
 FLUSH PRIVILEGES;
 EXIT;
 ```
-6.3) Import the Icinga 2 IDO schema
+### 6.3) Import the Icinga 2 IDO schema
 ```
 mysql -u root -p icinga < /usr/share/icinga2-ido-mysql/schema/mysql.sql
 ```
 When prompted, input the MariaDB root password to finish the job.
 
-6.4) Enable the IDO MySQL module
+### 6.4) Enable the IDO MySQL module
 ```bash
 sudo vi /etc/icinga2/features-available/ido-mysql.conf
 ```
@@ -209,9 +209,14 @@ sudo systemctl restart httpd.service
 sudo icingacli setup token create
 ```
 7.4) Modify firewall rules in order to allow web access
+
+{{% alert warning %}}
+
+IMPORTANT STEP MUST DO
+
+{{% /alert %}}
+
 ```bash
-echo IMPORTANT STEP!
-echo VVVVVVVVVVVVVVV
 sudo firewall-cmd --zone=public --permanent --add-service=http
 sudo firewall-cmd --reload
 ```
