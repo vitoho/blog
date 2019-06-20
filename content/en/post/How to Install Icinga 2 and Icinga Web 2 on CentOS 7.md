@@ -9,7 +9,7 @@ view: 2
 
 Icinga 2 is a popular open source network resource monitoring system, and Icinga Web 2 is a web interface for Icinga 2. This article will describe how to install them on a CentOS 7 server.
 
-### Step 1: Update the system
+## Step 1: Update the system
 
 ```bash
 sudo yum install epel-release -y
@@ -19,7 +19,7 @@ sudo shutdown -r now
 
 After the reboot, use the same sudo user to log in.
 
-### Step 2: Install Apache
+## Step 2: Install Apache
 Install Apache using YUM:
 
 ```bash
