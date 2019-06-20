@@ -22,7 +22,7 @@ googleAnalytics = "UA-134954108-2"
 disqusShortname = ""
 
 # Code Highlight
-#pygmentsCodeFences = true
+pygmentsCodeFences = true
 
 ############################
 ## Advanced options below ##
