@@ -7,6 +7,8 @@ view: 2
 ---
 > Original Article: https://www.vultr.com/docs/how-to-install-icinga-2-and-icinga-web-2-on-centos-7
 
+{{% toc %}}
+
 Icinga 2 is a popular open source network resource monitoring system, and Icinga Web 2 is a web interface for Icinga 2. This article will describe how to install them on a CentOS 7 server.
 
 ### Step 1: Update the system
@@ -93,8 +95,9 @@ Save and quit:
 :wq!
 ```
 Restart the Apache service in order to put new configurations into effect:
-
+```bash
 sudo systemctl restart httpd.service
+```
 ### ***Step 5: Install Icinga 2 and its plugins(SELinux)
 On CentOS 7, you can install Icinga 2 and its plugins using the icinga YUM repo:
 ```bash
