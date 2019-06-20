@@ -14,7 +14,7 @@ A fresh Vultr CentOS 7 server instance.
 A sudo user.
 Step 1: Update the system
 
-```bash
+```Bash
 sudo yum install epel-release -y
 sudo yum update -y
 sudo shutdown -r now
