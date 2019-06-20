@@ -10,11 +10,11 @@ links:
     name: Originally published on VULTR
     url: 'https://www.vultr.com/docs/how-to-install-icinga-2-and-icinga-web-2-on-centos-7'
   - icon_pack: fas
-    icon: fa-project-diagram
+    icon: link
     name: Setting up Icinga 2
     url: 'https://icinga.com/docs/icinga2/latest/doc/02-getting-started/'
   - icon_pack: fas
-    icon: fa-project-diagram
+    icon: link
     name: Installing Icinga Web 2
     url: 'https://icinga.com/docs/icingaweb2/latest/doc/02-Installation/'
 ---
