@@ -14,7 +14,7 @@ A fresh Vultr CentOS 7 server instance.
 A sudo user.
 Step 1: Update the system
 
-```shell
+```bash
 sudo yum install epel-release -y
 sudo yum update -y
 sudo shutdown -r now
@@ -24,33 +24,41 @@ After the reboot, use the same sudo user to log in.
 
 Step 2: Install Apache
 Install Apache using YUM:
-```shell
+```bash
 sudo yum install httpd -y
 ```
 Disable the pre-set Apache welcome page:
-```shell
+```bash
 sudo sed -i 's/^/#&/g' /etc/httpd/conf.d/welcome.conf
 ```
 Forbid Apache from exposing files and directories within the web root directory /var/www/html to visitors:
-
+```bash
 sudo sed -i "s/Options Indexes FollowSymLinks/Options FollowSymLinks/" /etc/httpd/conf/httpd.conf
+```
 Start the Apache service and get it started on boot:
 
+```bash
 sudo systemctl start httpd.service
 sudo systemctl enable httpd.service
-Step 3: Install MariaDB
+```
+
+### Step 3: Install MariaDB
+
 Install MariaDB using YUM:
-
+```bash
 sudo yum install mariadb mariadb-server -y
+```
 Start the MariaDB service:
-
+```bash
 sudo systemctl start mariadb.service
 sudo systemctl enable mariadb.service
+```
 Secure the installation of MariaDB:
-
+```bash
 sudo /usr/bin/mysql_secure_installation
+```
 During the process, answer questions on the screen as below:
-
+```te
 Enter current password for root (enter for none): Enter
 Set root password? [Y/n]: Y
 New password: <your-password>
@@ -59,6 +67,7 @@ Remove anonymous users? [Y/n]: Y
 Disallow root login remotely? [Y/n]: Y
 Remove test database and access to it? [Y/n]: Y
 Reload privilege tables now? [Y/n]: Y
+```
 Step 4: Install PHP
 Install PHP and necessary PHP extensions as required by Icinga 2 and Icinga Web 2:
 
@@ -231,3 +240,7 @@ Click the "Next" button to go to next page.
 7.21) On the Congratulations! page, click the Login to Icinga Web 2 button to jump to the Icinga Web 2 login page. Use the Icinga Web 2 administrative account and password you setup earlier to log in. Feel free to explore the Icinga Web 2 dashboard.
 
 That concludes our tutorial. Thank you for reading.
+
+```
+
+```
