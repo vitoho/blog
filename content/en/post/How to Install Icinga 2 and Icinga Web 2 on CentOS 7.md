@@ -76,8 +76,9 @@ sudo yum install php php-gd php-intl php-ldap php-ZendFramework php-ZendFramewor
 Then you need to setup the proper timezone for your machine, which can be determined from the PHP official website. On my server instance, the timezone value is "America/Los_Angeles".
 
 Open the PHP configuration file with the vi editor:
-
-~~`sudo vi /etc/php.ini`~~
+{{% alert warning %}}
+~~sudo vi /etc/php.ini~~
+{{% /alert %}}
 
 ```markdown
 sudo vi /etc/opt/rh/rh-php71/php.ini
