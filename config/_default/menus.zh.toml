@@ -5,23 +5,18 @@
 
 [[main]]
   name = "主页"
-  url = "#about"
+  url = "#"
   weight = 10
 
 [[main]]
   name = "文档"
-  url = "#posts"
+  url = "post"
   weight = 20
 
 [[main]]
-  name = "项目"
-  url = "#projects"
+  name = "关于"
+  url = "#about"
   weight = 30
-
-[[main]]
-  name = "Publications"
-  url = "#featured"
-  weight = 40
 
 [[main]]
   name = "联系"
