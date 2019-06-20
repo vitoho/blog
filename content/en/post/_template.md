@@ -1,6 +1,6 @@
 ---
 view: 2
-#tags: ["Icinga"]
+#tags: ["tag"]
 draft: true
 #date: 2019-06-18
 title: -TEMPLATE-
