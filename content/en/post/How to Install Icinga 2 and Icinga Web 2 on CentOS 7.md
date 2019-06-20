@@ -1,8 +1,9 @@
 ---
 #date: 2019-06-18
 title: How to Install Icinga 2 and Icinga Web 2 on CentOS 7
-tags: ["icinga2","centos7"]
+tags: ["icinga2","CentOS"]
 view: 2
+highlight : true
 #draft: true
 ---
 > Original Article: https://www.vultr.com/docs/how-to-install-icinga-2-and-icinga-web-2-on-centos-7
