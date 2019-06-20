@@ -1,7 +1,7 @@
 ---
 #date: 2019-06-18
 title: Create a phpinfo File
-tags:["PHP"]
+tags: ["PHP"]
 view: 2
 #draft: true
 ---
