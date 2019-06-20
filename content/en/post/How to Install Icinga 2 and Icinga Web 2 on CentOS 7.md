@@ -1,7 +1,7 @@
 ---
 #date: 2019-06-18
 title: How to Install Icinga 2 and Icinga Web 2 on CentOS 7
-tags: ["icinga2","centos7"]
+tags: ["icinga2","CentOS"]
 view: 2
 #draft: true
 ---
@@ -9,10 +9,7 @@ view: 2
 
 Icinga 2 is a popular open source network resource monitoring system, and Icinga Web 2 is a web interface for Icinga 2. This article will describe how to install them on a CentOS 7 server.
 
-Prerequisites
-A fresh Vultr CentOS 7 server instance.
-A sudo user.
-Step 1: Update the system
+### Step 1: Update the system
 
 ```bash
 sudo yum install epel-release -y
@@ -22,8 +19,9 @@ sudo shutdown -r now
 
 After the reboot, use the same sudo user to log in.
 
-Step 2: Install Apache
+### Step 2: Install Apache
 Install Apache using YUM:
+
 ```bash
 sudo yum install httpd -y
 ```
@@ -58,7 +56,7 @@ Secure the installation of MariaDB:
 sudo /usr/bin/mysql_secure_installation
 ```
 During the process, answer questions on the screen as below:
-```te
+```
 Enter current password for root (enter for none): Enter
 Set root password? [Y/n]: Y
 New password: <your-password>
@@ -68,18 +66,18 @@ Disallow root login remotely? [Y/n]: Y
 Remove test database and access to it? [Y/n]: Y
 Reload privilege tables now? [Y/n]: Y
 ```
-Step 4: Install PHP
+### Step 4: Install PHP
 Install PHP and necessary PHP extensions as required by Icinga 2 and Icinga Web 2:
-
+```bash
 sudo yum install php php-gd php-intl php-ldap php-ZendFramework php-ZendFramework-Db-Adapter-Pdo-Mysql -y
+```
 Then you need to setup the proper timezone for your machine, which can be determined from the PHP official website. On my server instance, the timezone value is "America/Los_Angeles".
 
 Open the PHP configuration file with the vi editor:
-
+```markdown
 ~~sudo vi /etc/php.ini~~
-
 sudo vi /etc/opt/rh/rh-php71/php.ini
-
+```
 Find the line:
 
 ;date.timezone =
