@@ -1,6 +1,6 @@
 ---
 #date: 2019-06-18
-title: Create a phpinfo File
+title: [翻译中]Create a phpinfo File
 tags: ["PHP"]
 view: 2
 #draft: true
