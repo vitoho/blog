@@ -16,7 +16,7 @@ links:
   - icon_pack: fas
     icon: blog
     name: Installing Icinga Web 2
-    url: 'https://icinga.com/docs/icingaweb2/latest/doc/02-Installation/
+    url: 'https://icinga.com/docs/icingaweb2/latest/doc/02-Installation/'
 ---
 {{% toc %}}
 
