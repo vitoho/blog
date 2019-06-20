@@ -19,6 +19,7 @@ organizations:
 
 # Short bio (displayed in user profile at end of posts)
 bio: My research interests include distributed robotics, mobile computing and programmable matter.
+[![Buy Me A Coffee](https://bmc-cdn.nyc3.digitaloceanspaces.com/BMC-button-images/custom_images/black_img.png)](https://www.buymeacoffee.com/vitoho)
 
 interests:
 - Artificial Intelligence
