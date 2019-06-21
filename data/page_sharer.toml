@@ -58,9 +58,9 @@
   enable = false
 
 [[buttons]]
-  id = "WeChat"
+  id = "QR-Code"
   url = "https://api.qrserver.com/v1/create-qr-code/?size=150x150&data={url}"
-  title = "Reddit"
-  icon_pack = "fab"
-  icon = "weixin"
+  title = "QR-Code"
+  icon_pack = "fas"
+  icon = "qrcode"
   enable = true
