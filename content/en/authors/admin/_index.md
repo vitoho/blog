@@ -50,7 +50,7 @@ social:
   link: https://github.com/vitoho
 - icon: mug-hot
   icon_pack: fas
-  link: https://www.buymeacoffee.com/vitoho
+  link: https://buymecoff.ee/vitoho
 # Link to a PDF of your resume/CV from the About widget.
 # To enable, copy your resume/CV to `static/files/cv.pdf` and uncomment the lines below.  
 # - icon: cv
