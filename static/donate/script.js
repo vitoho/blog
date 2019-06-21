@@ -9,7 +9,7 @@ const wqr = 'images/WeChanQR.png'
 
 const showQR = (QR) => {
 	if (QR) mbox.style.backgroundImage = `url(${ QR })`
-	bd.classList.add('blur')
+	//bd.classList.add('blur')
 	qbox.classList.add('fadeIn')
 	mbox.classList.add('showQR')
 }
@@ -27,6 +27,6 @@ mbox.addEventListener('click', () => {
 	setTimeout(a => {
 		qbox.classList.remove('fadeIn')
 		mbox.classList.remove('hideQR')
-		bd.classList.remove('blur')
+		//bd.classList.remove('blur')
 	}, 600)
 })
