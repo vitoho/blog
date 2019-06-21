@@ -18,7 +18,7 @@ organizations:
   url: ""
 
 # Short bio (displayed in user profile at end of posts)
-bio: My research interests include distributed robotics, mobile computing and programmable matter.<iframe src="https://ihoey.github.io/Playing-reward/" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:100px; width:100%;"  frameborder="0" scrolling="no"></iframe>
+bio: My research interests include distributed robotics, mobile computing and programmable matter.
 
 interests:
 - Artificial Intelligence
