@@ -26,8 +26,3 @@
 如果觉得还可以的话，点个赞呗~
 
 打赏一下的话就更好了~
-
-![微信支付](images/WeChanQR.png)
-
-
-![支付宝支付](images/AliPayQR.png)
