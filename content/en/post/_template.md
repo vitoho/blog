@@ -1,12 +1,15 @@
 ---
-view: 2
-#tags: ["tag"]
-draft: true
 #date: 2019-06-18
 title: -TEMPLATE-
+#tags: ["tag"]
+#categories: ["cat"]
+#summary: summary here
+draft: true
 links:
   - icon_pack: fab
     icon: medium
     name: Originally published on
     url: '/'
+#To show tableof contact, adding below tag.
+#{{% toc %}}
 ---
