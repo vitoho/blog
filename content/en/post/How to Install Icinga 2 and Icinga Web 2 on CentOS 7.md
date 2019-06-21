@@ -2,6 +2,7 @@
 #date: 2019-06-18
 title: How to Install Icinga 2 and Icinga Web 2 on CentOS 7
 tags: ["icinga2","CentOS"]
+categories: ["operation"]
 summary: This article will describe how to install them on a CentOS 7 server.
 #draft: true
 links:
