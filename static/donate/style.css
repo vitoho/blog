@@ -59,8 +59,8 @@ a {
 	width: 70px;
 	height: 70px;
 	line-height: 70px;
-	color:#666;
-	background: #c9f8c5 url(images/like.svg) no-repeat center 10px;
+	color:#fff;
+	background: #0f8000 url(images/like.svg) no-repeat center 10px;
 	background-size: 20px;
 	border-radius: 35px;
 	text-align: center;
