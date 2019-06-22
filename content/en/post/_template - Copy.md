@@ -1,16 +1,12 @@
 ---
-#date: 2019-06-18
-title: make iframe page transparent
-#tags: ["tag"]
-#categories: ["cat"]
-#summary: summary here
+title: Make iframe page get transparent
 links:
-  - icon_pack: fas
-    icon: blog
-    name: Originally article
-    url: 'https://www.cnblogs.com/yeminglong/p/3842048.html'
----
+- icon_pack: fas
+  icon: blog
+  name: Originally article
+  url: https://www.cnblogs.com/yeminglong/p/3842048.html
 
+---
 1. Adding **allowtransparency="true"** to an iframe tag.
 
 ```html
