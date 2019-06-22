@@ -59,12 +59,12 @@ a {
 	width: 70px;
 	height: 70px;
 	line-height: 70px;
-	color: #fff;
-	background: #ffd886 url(images/like.svg) no-repeat center 10px;
+	color:#666;
+	background: #86ffb8 url(images/like.svg) no-repeat center 10px;
 	background-size: 20px;
 	border-radius: 35px;
 	text-align: center;
-	left: calc(50% - 120px);
+	left: calc(50% - 100px);
 	top: calc(50% - 60px);
 	z-index: -1;
 	transform: rotatez(-15deg);
