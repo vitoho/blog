@@ -77,7 +77,7 @@ a {
 	border: 1px solid #ddd;
 	border-radius: 6px;
 	width: 160px;
-	height: 28px;
+	height: 56px;
 	float: left;
 	z-index: 1;
 }
@@ -116,7 +116,10 @@ a {
 }
 
 #donateBox #PayPal {
-	background-image: url(images/paypal.svg);
+	border: 1px solid #ddd;
+	width: 158px;
+	background-size:120px;
+	background-image: url(images/paypal.png);
 }
 
 #donateBox>#QQPay {
@@ -129,10 +132,12 @@ a {
 }
 
 #donateBox #AliPay {
+
 	background-image: url(images/alipay.svg);
 }
 
 #donateBox #WeChat {
+
 	background-image: url(images/wechat.svg);
 }
 
