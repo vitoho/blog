@@ -1,5 +1,5 @@
 ---
-title: Make iframe page get transparent
+title: Make a iframe Page Transparent
 links:
 - icon_pack: fas
   icon: blog
