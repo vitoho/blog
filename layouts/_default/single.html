@@ -4,12 +4,6 @@
 
   {{ partial "page_header.html" . }}
 
-  <div class="container-fluid docs">
-  <div class="row flex-xl-nowrap">
-  
-  <div class="col-12 col-md-3 col-xl-2 docs-sidebar">
-    <!--{{ partial "docs_sidebar.html" . }}-->
-  </div>
   <div class="article-container">
 
     {{ if .Params.toc }}
@@ -57,8 +51,6 @@
    {{ partial "comments.html" . }}
 
   </div>
-</div>
-</div>
 </article>
 
 {{- end -}}
