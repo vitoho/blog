@@ -8,8 +8,8 @@ summary: This article will describe how to install them on a CentOS 7 server.
 toc: true
 type: docs
 menu:
-  exaple:
-    parent: 
+  example:
+    parent: Example Topic
     weight: 1
 links:
   - icon_pack: fas
