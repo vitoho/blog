@@ -5,6 +5,12 @@ tags: ["icinga2","CentOS"]
 categories: ["operation"]
 summary: This article will describe how to install them on a CentOS 7 server.
 #draft: true
+toc: true
+type: docs
+menu:
+  exaple:
+    parent: 
+    weight: 1
 links:
   - icon_pack: fas
     icon: blog
