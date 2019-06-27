@@ -33,6 +33,19 @@
       {{ partial "section_pager.html" . }}
     </div>
     {{ end }}
+
+    {{ if .Params.toc }}
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">{{ i18n "on_this_page" }}</a></li>
+      </ul>
+
+      {{ .TableOfContents }}
+
+      {{ partial "docs_toc_foot.html" . }}
+    </div>
+    {{ end }}
+
 <iframe src="{{ .Site.BaseURL | absLangURL }}/donate/" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;"  frameborder="0" scrolling="no" allowtransparency=“true”></iframe>
    <!--{{ partial "donate.html" . }} -->
    {{ partial "comments.html" . }}
