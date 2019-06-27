@@ -4,19 +4,19 @@
 
   {{ partial "page_header.html" . }}
 
-  {{ if .Params.toc }}
-  <div class="d-none d-xl-block col-xl-2 docs-toc">
-    <ul class="nav toc-top">
-      <li><a href="#" id="back_to_top" class="docs-toc-title">{{ i18n "on_this_page" }}</a></li>
-    </ul>
-
-    {{ .TableOfContents }}
-
-    {{ partial "docs_toc_foot.html" . }}
-  </div>
-  {{ end }}
-
   <div class="article-container">
+
+    {{ if .Params.toc }}
+    <div class="d-none d-xl-block col-xl-2 docs-toc">
+      <ul class="nav toc-top">
+        <li><a href="#" id="back_to_top" class="docs-toc-title">{{ i18n "on_this_page" }}</a></li>
+      </ul>
+  
+      {{ .TableOfContents }}
+  
+      {{ partial "docs_toc_foot.html" . }}
+    </div>
+    {{ end }}
 
     <div class="article-style" itemprop="articleBody">
       {{ .Content }}
