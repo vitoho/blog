@@ -33,6 +33,16 @@ sudo shutdown -r now
 
 After the reboot, use the same sudo user to log in.
 
+{{% alert note %}}
+
+To make CentOS network interface enable at system start-up, please also run follow[^]:
+
+cd /etc/sysconfig/network-scripts/ 
+sed -i -e 's@^ONBOOT="no@ONBOOT="yes@' ifcfg-eth0
+{{% /alert %}}
+
+[^1] Questions about CentOS-7 - https://wiki.centos.org/FAQ/CentOS7
+
 ## Step 2: Install Apache
 Install Apache using YUM:
 
@@ -111,7 +121,7 @@ Restart the Apache service in order to put new configurations into effect:
 ```bash
 sudo systemctl restart httpd.service
 ```
-## ***Step 5: Install Icinga 2 and its plugins(SELinux)
+## Step 5: Install Icinga 2 and its plugins
 On CentOS 7, you can install Icinga 2 and its plugins using the icinga YUM repo:
 ```bash
 sudo rpm --import http://packages.icinga.org/icinga.key 

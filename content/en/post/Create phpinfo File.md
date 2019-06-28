@@ -2,7 +2,7 @@
 #date: 2019-06-18
 title: Create a phpinfo File
 tags: ["PHP"]
-view: 2
+categories: ["Web"]
 #draft: true
 ---
 1. Use any text editor and create a file named **phpinfo.php** on your computer.
