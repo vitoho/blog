@@ -35,11 +35,10 @@ After the reboot, use the same sudo user to log in.
 
 To make CentOS network interface enable at system start-up, please also run follow[^1]:
 
-{{% alert note %}}
-- cd /etc/sysconfig/network-scripts/ 
-
-- sed -i -e 's@^ONBOOT="no@ONBOOT="yes@' ifcfg-eth0
-{{% /alert %}}
+```bash
+cd /etc/sysconfig/network-scripts/
+sed -i -e 's@^ONBOOT="no@ONBOOT="yes@' ifcfg-eth0
+```
 
 [^1]: Questions about CentOS-7 - https://wiki.centos.org/FAQ/CentOS7
 
@@ -95,15 +94,12 @@ Install PHP and necessary PHP extensions as required by Icinga 2 and Icinga Web 
 ```bash
 sudo yum install php php-gd php-intl php-ldap php-ZendFramework php-ZendFramework-Db-Adapter-Pdo-Mysql -y
 ```
-Then you need to setup the proper timezone for your machine, which can be determined from the PHP official website. On my server instance, the timezone value is "America/Los_Angeles".
+Then you need to setup the proper timezone for your machine, which can be determined from the PHP official website.
 
 Open the PHP configuration file with the vi editor:
-{{% alert warning %}}
-~~sudo vi /etc/php.ini~~
-{{% /alert %}}
 
-```markdown
-sudo vi /etc/opt/rh/rh-php71/php.ini
+```bash
+sudo vi /etc/php.ini
 ```
 Find the line:
 ```
@@ -111,7 +107,7 @@ Find the line:
 ```
 Change it to:
 ```
-date.timezone = America/Los_Angeles
+date.timezone = Asia/Hong_Kong
 ```
 Save and quit:
 ```
@@ -124,8 +120,7 @@ sudo systemctl restart httpd.service
 ## Step 5: Install Icinga 2 and its plugins
 On CentOS 7, you can install Icinga 2 and its plugins using the icinga YUM repo:
 ```bash
-sudo rpm --import http://packages.icinga.org/icinga.key 
-sudo rpm -i https://packages.icinga.org/epel/7/release/noarch/icinga-rpm-release-7-1.el7.centos.noarch.rpm
+sudo yum install https://packages.icinga.com/epel/icinga-rpm-release-7-latest.noarch.rpm
 sudo yum install icinga2 nagios-plugins-all -y
 ```
 You can learn more about these plugins from the Monitoring Plugins Project.
@@ -205,22 +200,43 @@ You can verify your modification using the following command:
 ```bash
 id apache
 ```
-7.2) Install the icingaweb2 and icingacli RPM packages
+7.2) Please enable it prior installing the Icinga packages.
+
+```shell
+sudo yum install epel-release
+```
+
+7.3) Since version 2.5.0 we also require a **newer PHP version** than what is available in RedHat itself. You need to enable the SCL repository, so that the dependencies can pull in the newer PHP.
+
+```shell
+sudo yum install centos-release-scl
+```
+
+7.4) Install the icingaweb2 and icingacli RPM packages
+
 ```bash
 sudo yum install icingaweb2 icingacli icingaweb2-selinux -y
 ```
 If you have [SELinux](https://icinga.com/docs/icingaweb2/latest/doc/90-SELinux/) enabled, the package `icingaweb2-selinux` is also required. For RHEL/CentOS please read the [package repositories notes](https://icinga.com/docs/icingaweb2/latest/doc/02-Installation/#package-repositories-rhel-notes).
 
-Point the Apache web root directory to the location of Icinga Web 2:
+Then point the Apache web root directory to the location of Icinga Web 2:
 ```bash
 sudo icingacli setup config webserver apache --document-root /usr/share/icingaweb2/public
 sudo systemctl restart httpd.service
 ```
-7.3) Generate a setup token for later use in the web interface
+7.5) Setting up FPM
+
+```shell
+systemctl start rh-php71-php-fpm.service
+systemctl enable rh-php71-php-fpm.service
+```
+
+7.6) Generate a setup token for later use in the web interface
+
 ```bash
 sudo icingacli setup token create
 ```
-7.4) Modify firewall rules in order to allow web access
+7.7) Modify firewall rules in order to allow web access
 
 {{% alert warning %}}
 
@@ -232,21 +248,23 @@ IMPORTANT STEP MUST DO
 sudo firewall-cmd --zone=public --permanent --add-service=http
 sudo firewall-cmd --reload
 ```
-7.5) Initiate the Icinga 2 installation wizard in the web interface
+### Step 8: Icinga web 2 Installation Setup
+
+8.1) Initiate the Icinga 2 installation wizard in the web interface
 
 Point your web browser to the following URL:
 
 http://`<your-server-ip>`/icingaweb2/setup
 
-7.6) On the Welcome page, input the setup token you generated earlier, and then click the "Next" button.
+8.2) On the Welcome page, input the setup token you generated earlier, and then click the "Next" button.
 
-7.7) On the Modules page, select modules you want to enable (at least, the Monitoring module is required), and then click the "Next" button.
+8.3) On the Modules page, select modules you want to enable (at least, the Monitoring module is required), and then click the "Next" button.
 
-7.8) On the Requirements page, make sure that every requirement item is satisfied, and then click the "Next" button.
+8.4) On the Requirements page, make sure that every requirement item is satisfied, and then click the "Next" button.
 
-7.9) On the Authentication page, you need to choose the authentication method when accessing Icinga Web 2. Here, you can choose Database, and then click the "Next" button.
+8.5) On the Authentication page, you need to choose the authentication method when accessing Icinga Web 2. Here, you can choose Database, and then click the "Next" button.
 
-7.10) On the Database Resource page, fill out all required fields as below, and then click the "Next" button.
+8.6) On the Database Resource page, fill out all required fields as below, and then click the "Next" button.
 
 ```
 Resource Name*: icingaweb_db
@@ -256,11 +274,12 @@ Database Name*: icingaweb2
 Username*: root
 Password*: <MariaDB-root-password>
 ```
-7.11) On the Authentication Backend page, using the default backend name icingaweb2, click the Next button to move on.
+8.7) On the Authentication Backend page, using the default backend name icingaweb2, click the Next button to move on.
 
-7.12) On the Administration page, setup the first Icinga Web 2 administrative account (say it is icingaweb2admin) and password (icingaweb2pass), and then click the "Next" button.
+8.8) On the Administration page, setup the first Icinga Web 2 administrative account (say it is icingaweb2admin) and password (icingaweb2pass), and then click the "Next" button.
 
-7.13) On the Application Configuration page, you can adjust application- and logging-related configuration options to fit your needs. For now, you can use the default values listed below and click the "Next" button to proceed.
+8.9) On the Application Configuration page, you can adjust application- and logging-related configuration options to fit your needs. For now, you can use the default values listed below and click the "Next" button to proceed.
+
 ```
 Show Stacktraces: Checked
 User Preference Storage Type*: Database
@@ -268,13 +287,14 @@ Logging Type*: Syslog
 Logging Level*: Error
 Application Prefix*: icingaweb2
 ```
-7.14) On the Review page, double check your configuration, and then click the Next button.
+8.10) On the Review page, double check your configuration, and then click the Next button.
 
-7.15) On the Monitoring Module Configuration Welcome page, click the Next button.
+8.11) On the Monitoring Module Configuration Welcome page, click the Next button.
 
-7.16) On the Monitoring Backend page, use the default backend name icinga and backend type IDO, and then click the "Next" button.
+8.12) On the Monitoring Backend page, use the default backend name icinga and backend type IDO, and then click the "Next" button.
 
-7.17) On the Monitoring IDO Resource page, input IDO database details you setup earlier, and then click the "Next" button.
+8.13) On the Monitoring IDO Resource page, input IDO database details you setup earlier, and then click the "Next" button.
+
 ```
 Resource Name*: icinga_ido
 Database Type*: MySQL
@@ -283,18 +303,20 @@ Database Name*: icinga
 Username*: icinga
 Password*: icinga
 ```
-7.18) On the Command Transport page, still use these default values listed below. Click the Next button to move on.
+8.14) On the Command Transport page, still use these default values listed below. Click the Next button to move on.
+
 ```
 Transport Name*: icinga2
 Transport Type*: Local Command File
 Command File*: /var/run/icinga2/cmd/icinga2.cmd
 ```
-7.19) On the Monitoring Security page, still use the default value:
+8.15) On the Monitoring Security page, still use the default value:
+
 ```
 Protected Custom Variables: *pw*,*pass*,community
 ```
 Click the "Next" button to go to next page.
 
-7.20) On the review page, double check your configuration, and then click the Finish button.
+8.16) On the review page, double check your configuration, and then click the Finish button.
 
-7.21) On the Congratulations! page, click the Login to Icinga Web 2 button to jump to the Icinga Web 2 login page. Use the Icinga Web 2 administrative account and password you setup earlier to log in. Feel free to explore the Icinga Web 2 dashboard.
+8.17) On the Congratulations! page, click the Login to Icinga Web 2 button to jump to the Icinga Web 2 login page. Use the Icinga Web 2 administrative account and password you setup earlier to log in. Feel free to explore the Icinga Web 2 dashboard.
