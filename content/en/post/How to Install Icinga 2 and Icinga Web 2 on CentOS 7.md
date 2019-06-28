@@ -33,12 +33,12 @@ sudo shutdown -r now
 
 After the reboot, use the same sudo user to log in.
 
-{{% alert note %}}
-
 To make CentOS network interface enable at system start-up, please also run follow[^1]:
 
-cd /etc/sysconfig/network-scripts/ 
-sed -i -e 's@^ONBOOT="no@ONBOOT="yes@' ifcfg-eth0
+{{% alert note %}}
+- cd /etc/sysconfig/network-scripts/ 
+
+- sed -i -e 's@^ONBOOT="no@ONBOOT="yes@' ifcfg-eth0
 {{% /alert %}}
 
 [^1]: Questions about CentOS-7 - https://wiki.centos.org/FAQ/CentOS7
