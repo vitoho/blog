@@ -9,13 +9,13 @@ links:
   url: https://www.cnblogs.com/yeminglong/p/3842048.html
 
 ---
-1. 将**allowtransparency =“true”**添加到iframe标记。
+1> 将**allowtransparency =“true”**添加到iframe标记。
 
 ```html
 <iframe src="http://www.ylsapt.com/ProductSearch.html" width="100%" height="214" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
 ```
 
-2. 使页面的正文样式透明。
+2> 使页面的正文样式透明。
 
 ```html
 <body style="background:transparent;">  

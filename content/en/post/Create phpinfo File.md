@@ -5,9 +5,9 @@ tags: ["PHP"]
 categories: ["Web"]
 #draft: true
 ---
-1. Use any text editor and create a file named **phpinfo.php** on your computer.
+1> Use any text editor and create a file named **phpinfo.php** on your computer.
 
-2. Edit the file and input the following code:
+2> Edit the file and input the following code:
 
    ```php
    <?php
@@ -15,4 +15,4 @@ categories: ["Web"]
    ?>
    ```
 
-3. Upload the file with an **FTP** client to your **public_html** folder.
+3> Upload the file with an **FTP** client to your **public_html** folder.
