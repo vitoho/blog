@@ -1,13 +1,13 @@
 ---
 #date: 2019-06-18
-title: Create a phpinfo File
+title: 创建phpinfo文件
 tags: ["PHP"]
 categories: ["Web"]
 #draft: true
 ---
-1. Use any text editor and create a file named **phpinfo.php** on your computer.
+1. 使用任何文本编辑器并在您的计算机上创建名为**phpinfo.php**的文件。
 
-2. Edit the file and input the following code:
+2. 编辑文件并输入以下代码：
 
    ```php
    <?php
@@ -15,4 +15,4 @@ categories: ["Web"]
    ?>
    ```
 
-3. Upload the file with an **FTP** client to your **public_html** folder.
+3. 使用**FTP**客户端将文件上传到**public_html**文件夹。
