@@ -9,7 +9,7 @@
   weight = 10
 
 [[main]]
-  name = "文档"
+  name = "手札"
   url = "post"
   weight = 20
 
