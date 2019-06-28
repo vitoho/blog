@@ -1,5 +1,7 @@
 ---
 title: Make a iframe Page Transparent
+tags: ["HTML"]
+categories: ["Web"]
 links:
 - icon_pack: fas
   icon: blog

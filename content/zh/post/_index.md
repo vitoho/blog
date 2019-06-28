@@ -1,6 +1,5 @@
 ---
 title: Posts
-layout: docs
 
 # View.
 #   1 = List

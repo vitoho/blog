@@ -6,8 +6,8 @@ title: -TEMPLATE-
 #summary: summary here
 draft: true
 links:
-  - icon_pack: fab
-    icon: medium
+  - icon_pack: fas
+    icon: blog
     name: Originally published on
     url: '/'
 #To show tableof contact, adding below tag.
