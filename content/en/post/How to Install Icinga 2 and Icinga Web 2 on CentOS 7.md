@@ -117,7 +117,7 @@ Restart the Apache service in order to put new configurations into effect:
 ```bash
 sudo systemctl restart httpd.service
 ```
-## Step 5: Install Icinga 2 and its plugins
+## Step 5: Install Icinga 2 and Its Plugins
 On CentOS 7, you can install Icinga 2 and its plugins using the icinga YUM repo:
 ```bash
 sudo yum install https://packages.icinga.com/epel/icinga-rpm-release-7-latest.noarch.rpm
@@ -134,12 +134,12 @@ By default, the Icinga 2 program will enable three features: checker, mainlog, a
 ```bash
 sudo icinga2 feature list
 ```
-## Step 6: Setup the Icinga 2 IDO modules
+## Step 6: Setup the Icinga 2 IDO Modules
 ### 6.1) Install the IDO (Icinga Data Output) modules for MySQL
 ```bash
 sudo yum install icinga2-ido-mysql -y
 ```
-### 6.2) Create a database for Icinga 2**
+### 6.2) Create a database for Icinga 2
 
 Log into the MySQL shell as root:
 ```bash
@@ -165,17 +165,20 @@ When prompted, input the MariaDB root password to finish the job.
 sudo vi /etc/icinga2/features-available/ido-mysql.conf
 ```
 Find these lines:
-
->//user = "icinga"
->//password = "icinga"
->//host = "localhost"
->//database = "icinga"
+```
+//user = "icinga"
+//password = "icinga"
+//host = "localhost"
+//database = "icinga"
+```
 
 uncomment them as below:
-> user = "icinga"
-> password = "icinga"
-> host = "localhost"
-> database = "icinga"
+```
+user = "icinga"
+password = "icinga"
+host = "localhost"
+database = "icinga"
+```
 Save and quit:
 ```bash
 :wq!
@@ -185,7 +188,7 @@ Enable the ido-mysql feature:
 sudo icinga2 feature enable ido-mysql
 sudo systemctl restart icinga2.service
 ```
-### Step 7: Install Icinga Web 2
+## Step 7: Install Icinga Web 2
 7.1) Setup external command pipe
 
 ```bash
@@ -248,13 +251,13 @@ IMPORTANT STEP MUST DO
 sudo firewall-cmd --zone=public --permanent --add-service=http
 sudo firewall-cmd --reload
 ```
-### Step 8: Icinga web 2 Installation Setup
+## Step 8: Icinga Web 2 Installation Setup
 
 8.1) Initiate the Icinga 2 installation wizard in the web interface
 
 Point your web browser to the following URL:
 
-http://`<your-server-ip>`/icingaweb2/setup
+> http://`<your-server-ip>`/icingaweb2/setup
 
 8.2) On the Welcome page, input the setup token you generated earlier, and then click the "Next" button.
 
@@ -319,4 +322,4 @@ Click the "Next" button to go to next page.
 
 8.16) On the review page, double check your configuration, and then click the Finish button.
 
-8.17) On the Congratulations! page, click the Login to Icinga Web 2 button to jump to the Icinga Web 2 login page. Use the Icinga Web 2 administrative account and password you setup earlier to log in. Feel free to explore the Icinga Web 2 dashboard.
+8.17) On the Congratulations! page, click the Login to Icinga Web 2 button to jump to the Icinga Web 2 login page. Use the Icinga Web 2 administrative account and password you setup earlier to log in. Feel free to explore the Icinga Web 2 dashboard. :satisfied:
