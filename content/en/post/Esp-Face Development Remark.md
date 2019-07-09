@@ -15,7 +15,7 @@ links:
     url: 'https://github.com/espressif/esp-who'
   - icon_pack: fas
     icon: microchip
-    name: ESP-Who framework on GitHub
+    name: ESP-EYE Overview
     url: 'https://www.espressif.com/en/products/hardware/esp-eye/overview'
 #To show tableof contact, adding below tag.
 #{{% toc %}}
