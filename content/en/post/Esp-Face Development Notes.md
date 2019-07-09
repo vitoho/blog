@@ -1,6 +1,6 @@
 ---
 date: 2019-07-09
-title: Esp-Face Development Remark
+title: Esp-Face Development Notes
 tags: ["ESP32","ESP-EYE"]
 categories: ["IoT"]
 summary: A memo document for ESP-Face human recognition solution
