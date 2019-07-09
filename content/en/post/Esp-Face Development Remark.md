@@ -6,15 +6,15 @@ categories: ["IoT"]
 summary: A Remark document for ESP-Face human recognition solution
 links:
   - icon_pack: fab
-    icon: fa-github
+    icon: github
     name: ESP-Face on GitHub
     url: 'https://github.com/espressif/esp-face'
   - icon_pack: fab
-    icon: fa-github
+    icon: github
     name: ESP-Who framework on GitHub
     url: 'https://github.com/espressif/esp-who'
   - icon_pack: fas
-    icon: fa-microchip
+    icon: microchip
     name: ESP-Who framework on GitHub
     url: 'https://www.espressif.com/en/products/hardware/esp-eye/overview'
 #To show tableof contact, adding below tag.
