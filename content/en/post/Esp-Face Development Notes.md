@@ -3,7 +3,7 @@ date: 2019-07-09
 title: Esp-Face Development Remark
 tags: ["ESP32","ESP-EYE"]
 categories: ["IoT"]
-summary: A Remark document for ESP-Face human recognition solution
+summary: A memo document for ESP-Face human recognition solution
 links:
   - icon_pack: fab
     icon: github
@@ -105,7 +105,7 @@ Adding a task process for face handling task:
 xTaskCreatePinnedToCore(&task_process, "process", 4 * 1024, NULL, 5, NULL, 1);
 ```
 
-In the **task_process(void *arg)**, please add blow codes first to getting ready for image capturing.
+In the **task_process(void *arg)**, please add below codes first to getting ready for image capturing.
 
 ```c
     camera_fb_t * fb = NULL;
