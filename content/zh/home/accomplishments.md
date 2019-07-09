@@ -5,7 +5,7 @@ headless = true  # This file represents a page section.
 active = true  # Activate this widget? true/false
 weight = 110  # Order that this section will appear.
 
-title = "成果"
+title = "成&nbsp;&nbsp;&nbsp;&nbsp;果"
 subtitle = ""
 
 # Date format
