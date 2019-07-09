@@ -1,5 +1,5 @@
 ---
-#date: 2019-06-18
+date: 2019-06-28
 title: 创建phpinfo文件
 tags: ["PHP"]
 categories: ["Web"]
