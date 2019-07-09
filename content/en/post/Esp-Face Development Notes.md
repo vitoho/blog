@@ -105,7 +105,7 @@ Adding a task process for face handling task:
 xTaskCreatePinnedToCore(&task_process, "process", 4 * 1024, NULL, 5, NULL, 1);
 ```
 
-In the **task_process(void *arg)**, please add below codes first to getting ready for image capturing.
+In the **task_process(void *arg)**, please add below codes first for getting ready for image capturing.
 
 ```c
     camera_fb_t * fb = NULL;

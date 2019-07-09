@@ -1,9 +1,9 @@
 ---
 date: 2019-07-09
-title: Esp-Face Development Remark
+title: Esp-Face开发笔记
 tags: ["ESP32","ESP-EYE"]
 categories: ["IoT"]
-summary: A Remark document for ESP-Face human recognition solution
+summary: 一份关于测试ESP-Face人脸识别功能的备忘文档
 links:
   - icon_pack: fab
     icon: github
@@ -21,13 +21,9 @@ links:
 #{{% toc %}}
 ---
 
-> I found a interesting human (face) recognition solution framework for ESP-EYE which is a -development board for image recognition.
+本项目根据[**recognition_wechat**]中的 [[**app_facenet.c**](https://github.com/espressif/esp-who/blob/master/examples/single_chip/recognition_wechat/main/app_facenet.c)] 实例展开测试。将ESP-Face人脸识别的实现记录下来方便查询。
 
-And here I will mark down some key steps about face recognition for future recalling.
-
-The whole project is based on [[**app_facenet.c**](https://github.com/espressif/esp-who/blob/master/examples/single_chip/recognition_wechat/main/app_facenet.c)] in example [**recognition_wechat**].
-
-First of all, please make sure below header added to to your project.
+首先，请确保下面的头部内容添加到项目中。
 
 ```c
 /* 
@@ -92,20 +88,20 @@ static inline box_array_t *do_detection(camera_fb_t *fb, dl_matrix3du_t *image_m
 }
 ```
 
-Face ID initialization:
+Face ID初始化:
 
 ```c
 face_id_init(&id_list, FACE_ID_SAVE_NUMBER, ENROLL_CONFIRM_TIMES);
 aligned_face = dl_matrix3du_alloc(1, FACE_WIDTH, FACE_HEIGHT, 3);
 ```
 
-Adding a task process for face handling task:
+创建负责处理图像数据处理的task process:
 
 ```c
 xTaskCreatePinnedToCore(&task_process, "process", 4 * 1024, NULL, 5, NULL, 1);
 ```
 
-In the **task_process(void *arg)**, please add blow codes first to getting ready for image capturing.
+在**task_process(void *arg)**当中, 请首先添加如下代码来准备（初始化）图像捕获。
 
 ```c
     camera_fb_t * fb = NULL;
@@ -136,7 +132,7 @@ In the **task_process(void *arg)**, please add blow codes first to getting ready
     int8_t left_sample_face;
 ```
 
-Then following steps should  be run within the loop and keep going.
+然后在循环中分别执行以下步骤并继续。
 
 ```c
         //enroll state checking
@@ -280,7 +276,7 @@ Then following steps should  be run within the loop and keep going.
         }
 ```
 
-Remember to free up image memory before next image capturing:
+请记得在下一个图像捕捉之前释放图像内存:
 
 ```c
     dl_matrix3du_free(image_matrix);
@@ -289,7 +285,7 @@ Remember to free up image memory before next image capturing:
     vTaskDelay(500 / portTICK_RATE_MS);
 ```
 
-**detacted_process()** and **recognized_process()** like below:
+**detacted_process()** 和 **recognized_process()** 函数执行内容如下：
 
 ```c
 void detacted_process(){
@@ -307,4 +303,6 @@ void recognized_process(){
     
 }
 ```
+
+-:heart: ​End​-
 
