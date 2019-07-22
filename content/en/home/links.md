@@ -10,4 +10,7 @@ subtitle = "Some helpful & interesting links"
 
 +++
 
-* [Open Micro Labs] [https://openmicrolab.com/](https://openmicrolab.com/)
+* [KR].[Open Micro Labs] [https://openmicrolab.com/](https://openmicrolab.com/)
+
+  A personal blog about technical stuff and open source hardware related news
+
