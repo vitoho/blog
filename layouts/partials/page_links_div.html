@@ -15,7 +15,7 @@
   {{ $cite_link = true }}
 {{ end }}
 
-<div class="btn btn-outline-primary my-1">Visitor Counter: <script type="text/javascript" src="//counter.websiteout.net/js/15/0/0/0"></script></div>
+<div style="white-space:nowrap;">Visitor Counter: <script type="text/javascript" src="//counter.websiteout.net/js/15/0/0/0"></script></div>
 
 {{ if $cite_link | or $pdf_link | or .Params.external_link | or .Params.url_preprint | or .Params.url_pdf | or .Params.url_slides | or .Params.url_video | or .Params.url_source | or .Params.url_code | or .Params.url_dataset | or .Params.url_poster | or .Params.url_project | or .Params.links | or .Params.projects | or .Params.slides }}
 <div class="btn-links mb-3">
