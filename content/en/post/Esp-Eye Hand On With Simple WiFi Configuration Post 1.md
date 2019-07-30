@@ -1,14 +1,9 @@
 ---
 date: 2019-07-30
-title: [Updating]Esp-Eye Hand On With Simple WiFi Configuration - Post 1
+title: Esp-Eye Hand On With Simple WiFi Configuration - Post 1
 tags: ["ESP32","ESP-EYE","HTTP"]
 categories: ["IoT"]
 #summary: summary here
-links:
-  - icon_pack: fas
-    icon: blog
-    name: Originally published on
-    url: '/'
 #To show table of contact, adding below tag.
 #{{% toc %}}
 ---
