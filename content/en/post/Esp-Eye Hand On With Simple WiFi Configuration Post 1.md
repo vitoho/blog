@@ -1,10 +1,10 @@
----
 date: 2019-07-30
 title: Esp-Eye Hand On With Simple WiFi Configuration - Post 1
 tags: ["ESP32","ESP-EYE","HTTP"]
 categories: ["IoT"]
 #summary: summary here
 links:
+
   - icon_pack: fab
     icon: github
     name: Captdns
@@ -19,13 +19,12 @@ links:
     url: 'https://github.com/tripflex/captive-portal-wifi-web'
 #To show table of contact, adding below tag.
 #{{% toc %}}
----
 
 In recent days, I was studying ESP-EYE development kit (from ESPRESSIF). Try to make some fun experiences with that, now post my first note about how to make a simple web based Wi-Fi captive portal (so much bugs to be fixed, but it works). To lean more about 'Esp-Face' please visit my early post here: [https://vitoho.ml/post/esp-face-development-notes/] ({{<ref "/post/Esp-Face Development Notes.md" >}})
 
 Now let's start our journey!
 
-### Wi-Fi/Httpd Header to be added to the program:
+### Wi-Fi/Httpd headers to be added to the program:
 
 ```c
 #include "esp_wifi.h"
@@ -35,19 +34,15 @@ Now let's start our journey!
 #include "esp_http_server.h"
 ```
 
-
-
 ### Captive DNS
 
-Refer to 'cornelis-61/esp32_Captdns', you can easily make your esp kit captive uri request to default page.
+Refer to '**cornelis-61/esp32_Captdns**', you can easily make your esp kit captive URL request to your custom default page.
 
 Link: [https://github.com/cornelis-61/esp32_Captdns](https://github.com/cornelis-61/esp32_Captdns) 
 
-
-
 ### Adding HTTP handler
 
-Add few HTTP handler like below, register handler with  httpd_register_uri_handler(httpd_handle_t, httpd_uri_t)
+Add few HTTP handlers like below, register handler with httpd_register_uri_handler(httpd_handle_t, httpd_uri_t):
 
 ```c
 httpd_handle_t camera_httpd = NULL;
@@ -110,11 +105,11 @@ httpd_handle_t camera_httpd = NULL;
 
 ```
 
-From now on, the ESP kit should can handling your HTTP request.
+From now on, the ESP kit can handling the HTTP request.
 
 :beetle:Known issues & to-do list: 
 
-- [x] Captive portal with Android phone could not do redirect, not solved yet.
+:white_check_mark: Captive portal with Android phone could not do redirect, not solved yet.
 
 
 
@@ -438,8 +433,9 @@ static esp_err_t cmd_handler(httpd_req_t *req){
 
 :beetle:Known issue &To-do list:
 
-- [x] Now web UI will show a fake connect successfully message, the next step might be to complete  the cmd_handler, make it return back connection success/failure status.
-- [x] When input the wrong password the program will keep try to connect with AP, so need to set up a retry countdown to prevent this. 
+:white_check_mark: ​Now web UI will show a fake connect successfully message, the next step might be to complete  the cmd_handler, make it return back connection success/failure status.
+
+:white_check_mark: ​When input the wrong password the program will keep try to connect with AP, so need to set up a retry countdown to prevent this. 
 
 :lollipop: One last thing: 
 
