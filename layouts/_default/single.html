@@ -37,11 +37,12 @@
   <iframe src="{{ .Site.BaseURL | absLangURL }}/donate/" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;"  frameborder="0" scrolling="no" allowtransparency="true"></iframe>
    <!--{{ partial "donate.html" . }} -->
    <!--{{ partial "comments.html" . }}-->
+   <script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
    <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
-   <div id="vcomments"></div>
+   <div id="vcomment"></div>
    <script>
     new Valine({
-        el: '#vcomments',
+        el: '#vcomment',
         appId: 'EhITe2H0uExeHtQH5ogHFSQL-MdYXbMMI',
         appKey: 'O3ec8q8S5TNym4tBcIvwxSIp'
     })
