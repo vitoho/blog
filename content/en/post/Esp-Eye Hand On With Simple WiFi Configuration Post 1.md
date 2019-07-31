@@ -8,7 +8,7 @@ categories: ["IoT"]
 #{{% toc %}}
 ---
 
-In recent days, I was studying ESP-EYE development kit (from ESPRESSIF). Try to make some fun experiences with that, now post my first note about how to make a simple web based Wi-Fi captive portal (so much bugs to be fixed, but it works). To lean more about 'Esp-Face' please visit my early post here: [https://vitoho.ml/post/esp-face-development-notes/](https://vitoho.ml/post/esp-face-development-notes/)
+In recent days, I was studying ESP-EYE development kit (from ESPRESSIF). Try to make some fun experiences with that, now post my first note about how to make a simple web based Wi-Fi captive portal (so much bugs to be fixed, but it works). To lean more about 'Esp-Face' please visit my early post here: [https://vitoho.ml/post/esp-face-development-notes/] ({{<ref "/post/Esp-Face Development Notes.md" >}})
 
 Now let's start our journey!
 
@@ -107,7 +107,7 @@ Know issues & to-do list:
 
 ### Complete the index page  handler
 
-Refer to [https://blog.csdn.net/qq_27114397/article/details/89643232](https://blog.csdn.net/qq_27114397/article/details/89643232)(Chinese), you can make your ESP kit to be a webserver. Just use gzip to pack your html file then flash into chip. 
+Refer to [LINK](https://blog.csdn.net/qq_27114397/article/details/89643232) (Chinese), you can make your ESP kit to be a webserver. Just use gzip to pack your html file then flash into chip. 
 
 Using gzip to convert your file into .gz file:
 
@@ -148,8 +148,12 @@ static esp_err_t index_handler(httpd_req_t *req){
 }
 ```
 
+
+
 # [NOT-COMPLETE]
 
-You can also find source code form GitHub Gist:
+{{% alert note %}}
 
-{{< gist vitoho 7526d18e3c8697aa4f3c575706828542  >}}
+You can also find source code form [GitHub Gist](https://gist.github.com/vitoho/7526d18e3c8697aa4f3c575706828542).
+
+{{% /alert %}}
