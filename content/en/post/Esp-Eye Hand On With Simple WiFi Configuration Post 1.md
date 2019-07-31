@@ -12,7 +12,7 @@ links:
     url: 'https://github.com/cornelis-61/esp32_Captdns'
   - icon_pack: fas
     icon: blog
-    name: WebServer reference notes
+    name: WebServer note
     url: 'https://blog.csdn.net/qq_27114397/article/details/89643232'
   - icon_pack: fab
     icon: github
