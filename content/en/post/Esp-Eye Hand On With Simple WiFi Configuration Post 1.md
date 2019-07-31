@@ -4,6 +4,14 @@ title: Esp-Eye Hand On With Simple WiFi Configuration - Post 1
 tags: ["ESP32","ESP-EYE","HTTP"]
 categories: ["IoT"]
 #summary: summary here
+  - icon_pack: fab
+    icon: github
+    name: Originally published on
+    url: 'https://github.com/cornelis-61/esp32_Captdns'
+  - icon_pack: fas
+    icon: blog
+    name: WebServer reference notes
+    url: 'https://blog.csdn.net/qq_27114397/article/details/89643232'
 #To show table of contact, adding below tag.
 #{{% toc %}}
 ---
@@ -119,6 +127,14 @@ Adding following into the **component.mk** of your project:
 
 ```
 COMPONENT_EMBED_FILES := www/index.html.gz
+COMPONENT_EMBED_FILES += www/something_else
+```
+Adding your file to CMakeLists:
+```
+set(COMPONENT_EMBED_FILES
+        "www/index.html.gz"
+	"www/redirect.html.gz"
+   )
 ```
 
 To invoke your html file, just adding some codes like:
