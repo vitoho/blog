@@ -4,6 +4,7 @@ title: Esp-Eye Hand On With Simple WiFi Configuration - Post 1
 tags: ["ESP32","ESP-EYE","HTTP"]
 categories: ["IoT"]
 #summary: summary here
+links:
   - icon_pack: fab
     icon: github
     name: Originally published on
