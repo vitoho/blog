@@ -1,3 +1,4 @@
+---
 date: 2019-07-30
 title: Esp-Eye Hand On With Simple WiFi Configuration - Post 1
 tags: ["ESP32","ESP-EYE","HTTP"]
@@ -19,7 +20,7 @@ links:
     url: 'https://github.com/tripflex/captive-portal-wifi-web'
 #To show table of contact, adding below tag.
 #{{% toc %}}
-
+---
 In recent days, I was studying ESP-EYE development kit (from ESPRESSIF). Try to make some fun experiences with that, now post my first note about how to make a simple web based Wi-Fi captive portal (so much bugs to be fixed, but it works). To lean more about 'Esp-Face' please visit my early post here: [https://vitoho.ml/post/esp-face-development-notes/] ({{<ref "/post/Esp-Face Development Notes.md" >}})
 
 Now let's start our journey!
@@ -123,7 +124,7 @@ Using gzip to convert your file into .gz file:
 gzip index.html
 ```
 
-Adding following into the **component.mk** of your project:
+Adding following codes into the **component.mk** of your project:
 
 ```
 COMPONENT_EMBED_FILES := www/index.html.gz
@@ -137,7 +138,7 @@ set(COMPONENT_EMBED_FILES
    )
 ```
 
-To invoke your html file, just adding some codes like:
+To invoke your html file, just adding codes like:
 
 ```c
 tern const unsigned char index_html_gz_start[] asm("_binary_index_html_gz_start");
@@ -148,7 +149,7 @@ httpd_resp_set_type(req, "text/html");
 httpd_resp_set_hdr(req, "Content-Encoding", "gzip");
 ```
 
-So I can make the index handler as this:
+So I can make the index handler at the end:
 
 ```c
 static esp_err_t index_handler(httpd_req_t *req){
@@ -164,7 +165,7 @@ static esp_err_t index_handler(httpd_req_t *req){
 }
 ```
 
-### Fetching AP info and showing in web
+### Fetching AP info and showing them in web
 
 In the **index.html**, I will use **fetch** to get wireless AP info from HTTP server then fill JSON format date into checklist.
 
@@ -302,6 +303,8 @@ static esp_err_t status_handler(httpd_req_t *req){
 }
 ```
 
+### Connecting with Wi-Fi
+
 Once user hit [Save&Test] button, will use **fetch** again to post the AP SSID and password to HEEP server. The difference from the pervious step  is that AP info will be putted into the headers.
 
 ```javascript
@@ -431,7 +434,7 @@ static esp_err_t cmd_handler(httpd_req_t *req){
 }
 ```
 
-:beetle:Known issue &To-do list:
+:beetle:Known issues & to-do list:
 
 :white_check_mark: ​Now web UI will show a fake connect successfully message, the next step might be to complete  the cmd_handler, make it return back connection success/failure status.
 
