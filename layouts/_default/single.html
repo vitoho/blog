@@ -37,6 +37,14 @@
   <iframe src="{{ .Site.BaseURL | absLangURL }}/donate/" style="overflow-x:hidden;overflow-y:hidden; border:0xp none #fff; min-height:240px; width:100%;"  frameborder="0" scrolling="no" allowtransparency="true"></iframe>
    <!--{{ partial "donate.html" . }} -->
    <!--{{ partial "comments.html" . }}-->
+   <script src='//unpkg.com/valine/dist/Valine.min.js'></script>
+   <script>
+    new Valine({
+        el: '#vcomments',
+        appId: '<API_ID>',
+        appKey: '<API_Key>'
+    })
+   </script>
   
   </div>
 </article>
