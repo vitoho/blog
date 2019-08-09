@@ -10,7 +10,11 @@ subtitle = "Some helpful & interesting links"
 
 +++
 
-* [KR].[Open Micro Labs] [https://openmicrolab.com/](https://openmicrolab.com/)
+* [KR].[Open Micro Labs] [openmicrolab.com/](openmicrolab.com/)
 
   A personal blog about technical stuff and open source hardware related news
+  
+* [CN].[IoT-Fans] [iot-fans.xyz](iot-fans.xyz)
+
+  
 
