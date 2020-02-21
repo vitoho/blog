@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8" ?>
 <Autodiscover xmlns="http://schemas.microsoft.com/exchange/autodiscover/responseschema/2006">
 <Response xmlns="http://schemas.microsoft.com/exchange/autodiscover/outlook/responseschema/2006a">
 <Account>
@@ -8,7 +7,8 @@
 <Type>IMAP</Type>
 <Server>imap.zoho.com.cn</Server>
 <Port>993</Port>
-<DomainRequired>on</DomainRequired>
+<DomainRequired>off</DomainRequired>
+<LoginName/>
 <SPA>off</SPA>
 <SSL>on</SSL>
 <AuthRequired>on</AuthRequired>
@@ -17,7 +17,8 @@
 <Type>POP3</Type>
 <Server>pop.zoho.com.cn</Server>
 <Port>995</Port>
-<DomainRequired>on</DomainRequired>
+<DomainRequired>off</DomainRequired>
+<LoginName/>
 <SPA>off</SPA>
 <SSL>on</SSL>
 <AuthRequired>on</AuthRequired>
@@ -26,11 +27,12 @@
 <Type>SMTP</Type>
 <Server>smtp.zoho.com.cn</Server>
 <Port>465</Port>
-<DomainRequired>on</DomainRequired>
+<DomainRequired>off</DomainRequired>
+<LoginName/>
 <SPA>off</SPA>
-<SSL>on</SSL>
+<Encryption>SSL</Encryption>
 <AuthRequired>on</AuthRequired>
-<UsePOPAuth>on</UsePOPAuth>
+<UsePOPAuth>off</UsePOPAuth>
 <SMTPLast>off</SMTPLast>
 </Protocol>
 </Account>
